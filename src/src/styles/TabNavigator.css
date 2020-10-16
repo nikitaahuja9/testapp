@@ -1,0 +1,121 @@
+.title_style {
+    background-color: #24292E;
+    top:0;
+    left:0;
+    margin-left: 0.5em;
+    margin-top: 15px;
+    position: fixed;
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    border-color: #24292E;
+    transition: ease-in-out all 300ms;
+    cursor: pointer;
+    background: none;
+	border: none;
+	outline: none;
+}
+
+@media screen and (max-width: 992px) {
+    .title_style {
+        color:white;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+        padding:3px;
+        font-size: 30px;
+        font-weight: 400; 
+    } 
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 999
+}
+
+.container>ul{
+    list-style: none;
+}
+.container>ul>li{
+    display: inline;
+}
+
+.container>ul>li>button{
+    background: none;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: ease-in-out all 300ms;
+    text-transform: capitalize;
+    border-radius: 2;
+}
+.container>ul>li.active>button{
+    background-color: #24292E;
+    color: #ffffff;   
+    transition: ease-in-out all 300ms;
+}
+
+.container>ul>li:not(.active)>button:hover{
+    color:#21819e;
+    transition: ease-in-out all 100ms;
+}
+
+@media screen and (max-width:599px){
+    .container{
+        padding: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.9) 10%, rgba(255,255,255,0) 100%);
+    }
+    .container>ul>li:not(:last-of-type){
+        margin-right: 8px;
+    }
+    .container>ul>li>button{
+        font-size: 16px;
+        padding: 6px 8px;
+
+    }
+}
+
+@media (min-width: 600px){
+    .container{
+        padding: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.9) 10%, rgba(255,255,255,0) 100%);
+    }
+    .container>ul>li:not(:last-of-type){
+        margin-right: 6px;
+    }
+    .container>ul>li>button{
+        font-size: 16px;
+        padding: 6px 8px;
+
+    }
+}
+
+@media screen and (min-width: 900px){
+    .container>ul>li:not(:last-of-type){
+        margin-right: 6px;
+    }
+    .container>ul>li>button{
+        font-size: 18px;
+        padding: 10px 12px;
+
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container{
+        padding:16px 24px;
+        background: none;
+    }
+
+    .container>ul>li:not(:last-of-type){
+        margin-right: 24px;
+    }
+}
